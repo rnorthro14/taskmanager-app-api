@@ -1,4 +1,4 @@
-# status-tool-app-api
+# taskmanager-app-api
 NodeJS, status update using express, mongoDB
 
 Clone repository
