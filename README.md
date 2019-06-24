@@ -7,7 +7,7 @@ $ cd status-tool-app-api
 $ npm install
 $ npm start
 ```
-If you don't have it installed already, install nodemon globally
+Optional: If you don't have it installed already, install nodemon globally
 ``` $ npm install -g nodemon ```
 
 You'll need data to run app. The app is currently set up to query a mongodb named "tasks".  The data schema looks like this:
@@ -36,25 +36,20 @@ You'll need data to run app. The app is currently set up to query a mongodb name
 }
 ```
 Run mongodb
-```
-$ mongod
-```
+``` $ mongod ```
 
 For a quickstart to create the db, run the following in a separate terminal window:
 ```
 $ mongo
 > use tasks
 switched to db tasks
-> 
 > db.tasks.insert({"status":"Open", "title":"Model X test", "responsible":"Elon Musk", "description":"Teslas are great", "last_updated":new Date(Date.now()), "severity":"Medium"})
-
+```
 
 Once you have data in place, you can run the app:
-```
-$ npm start
-or
-$ npm run dev
-```
+``` $ npm start ```
+or (if nodemon)
+``` $ npm run dev ```
 Test in browser or an API utility like 
 [Postman](https://www.getpostman.com/)
 [Direct](http://localhost:4000/tasks)
